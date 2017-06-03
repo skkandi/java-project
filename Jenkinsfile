@@ -3,9 +3,9 @@ pipeline {
 
   stages {
     stage('build') {
-      steps {
+      steps{
         sh 'ant -f build.xml -v'
-      }  
+      }
     }
   }
 }
