@@ -6,12 +6,12 @@ public class RectangleTest {
 
   @Test
   public void testGetArea() {
-    assertEquals (myRectangle.getArea(),35);
+    assertEquals (myRectangle.getArea(),42);
   }
 
   @Test
   public void testGetPerimeter() {
-    assertEquals (myRectangle.getPerimeter(),28);
+    assertEquals (myRectangle.getPerimeter(),26);
   }
 
   @Test
