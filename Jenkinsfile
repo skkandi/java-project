@@ -73,6 +73,7 @@ pipeline {
         echo "stash local changes NOW"
         sh 'git stash'
         sh 'git pull origin development'
+        sh 'git pull origin master'
         echo " cehcking out development"
         sh 'git checkout development'
         echo "checkout master"
