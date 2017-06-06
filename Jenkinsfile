@@ -2,7 +2,7 @@ pipeline {
   agent none
 
   stages  {
-    stage('Unit Tests') {
+    stage('Unit Tests ') {
       agent {
         label 'apache'
       }
@@ -70,18 +70,18 @@ pipeline {
         branch 'development'
       }
       steps{
-        echo "stash local changes NOW"
+        echo "Stashing Any Local Changes"
         sh 'git stash'
-        sh 'git pull origin development'
-        sh 'git pull origin master'
-        echo " cehcking out development"
+        echo "Checking Out Development Branch"
         sh 'git checkout development'
-        echo "checkout master"
+        echo 'Checking Out Master Branch'
+        sh 'git pull origin'
         sh 'git checkout master'
-        echo 'merge dev to master'
+        echo 'Merging Development into Master Branch'
         sh 'git merge development'
-        echo 'pushing to master'
+        echo 'Pushing to Origin Master'
         sh 'git push origin master'
+
       }
     }
   }
